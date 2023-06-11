@@ -1,1 +1,400 @@
 @charset "utf-8";
+/* 共通 */
+.inner {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
+/* 共通 */
+
+
+/* ヘッダー */
+.header {
+    background: #fff;
+}
+  
+.home-icon {
+    color: #777;
+    padding: 15px;
+}
+
+.h-positioning {
+    margin-left: auto;
+}
+
+.h-button {
+    margin-top: 15px;
+    background-color: #6ba7eb;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 12px 14px;
+    transition: all 0.3s ease-in-out;
+}
+.h-button:hover {
+    color: #333;
+}
+  
+.hamburger-menu {
+    margin-top: 15px;
+    position: relative;
+    height: 51px;
+    width: 51px;
+    display: none;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #777;
+    border-radius: 20%;
+  }
+  
+  .hamburger-menu div {
+    position: absolute;
+    left: 10px;
+    height: 2px;
+    width: 27px;
+    background-color: #777;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .hamburger-menu div:nth-of-type(1) {
+    bottom: 33px;
+  }
+  .hamburger-menu div:nth-of-type(2) {
+    bottom: 23px;
+  }
+  .hamburger-menu div:nth-of-type(3) {
+    bottom: 13px;
+  }
+  
+@media screen and (max-width: 767px) {
+    /* 767px以下に適用されるcss（スマホ用） */
+    .h-button {
+        display: none; /* ボタンを非表示にする */
+    }
+    .hamburger-menu {
+        display: block; /* ハンバーガーメニューを表示する */
+    }
+}
+/* ヘッダー */
+
+
+/* セクション1 */
+.keyvisual {
+    position: relative;
+}
+
+.keyvisual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-title {
+    position: absolute;
+    top: 400px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #6ba7eb;
+    white-space: nowrap;
+}
+
+.sub-title {
+    position: absolute;
+    top: 490px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.main-title,
+.sub-title {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+	/* 1199px以下に適用されるcss（タブレット用） */
+    .main-title {
+        top: 250px;
+    }
+    .sub-title {
+        top: 340px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	/* 767px以下に適用されるcss（スマホ用） */
+    .main-title {
+        top: 200px;
+        font-size: 40px;
+    }
+    .sub-title {
+        top: 270px;
+        font-size: 30px;
+    }
+}
+/* セクション1 */
+
+
+/* セクション2 */
+.work {
+    background: #e3f2fd;
+}
+
+.work .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-flow: column;
+}
+
+.work img {
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+.work-box-a {
+    width: 40%;
+    margin-top: 50px;
+}
+
+.work-box-b {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.work-title {
+    margin-top: 20px;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.work-text {
+    margin-top: 35px;
+    font-size: 15px;
+    line-height: 18px;
+    word-break: break-all;
+}
+
+@media screen and (max-width: 1199px) {
+	/* 1199px以下に適用されるcss（タブレット用） */
+    .work .flex {
+        flex-flow: column;        
+    }    
+    .work-box-a {
+        width: 100%;
+    }
+    .work-box-b {
+        margin-left: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+/* セクション2 */
+
+
+/* セクション3 */
+.skills {
+    background: #fff;
+}
+
+.skills-title {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    opacity: 0.7;
+}
+
+.image-container img:hover {
+    opacity: 1.0;
+}
+
+.image-container img:nth-child(3n + 1) {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1199px) {
+	/* 1199px以下に適用されるcss（タブレット用） */
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img{
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+      
+    .image-container :nth-child(3n) {
+        margin-bottom: 100px;
+      }
+}
+/* セクション3 */
+
+
+/* セクション4 */
+.plan {
+    background: #d0dfea;
+    padding-bottom: 50px;
+}
+
+.plan-title {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.cell-table {
+    display: table;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+th, tr, td {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 10px;
+}
+
+th {
+    background-color: #6ba7eb;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #e0efff;
+} 
+
+.cell-table th,
+.cell-table td {
+    border: 1px solid #ffffff; /* セルの境界線を設定 */
+}
+  
+.cell-table th:first-child,
+.cell-table td:first-child {
+    border-left: none; /* 最初の列の左側の境界線を非表示にする */
+}
+  
+.cell-table th:last-child,
+.cell-table td:last-child {
+    border-right: none; /* 最後の列の右側の境界線を非表示にする */
+}
+  
+.cell-table tr:first-child th,
+.cell-table tr:last-child td {
+    border-top: none; /* 最初の行の上側の境界線を非表示にする */
+}
+  
+.cell-table tr:last-child td {
+    border-bottom: none; /* 最後の行の下側の境界線を非表示にする */
+}
+
+@media screen and (max-width: 767px) {
+	/* 767px以下に適用されるcss（スマホ用） */
+    th{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    td{
+        font-size: 12px;
+    }
+}
+/* セクション4 */
+
+
+/* セクション5 */
+.sns {
+    background: #e3f2fd;
+    padding: 200px 0;
+    text-align: center;
+}
+
+.sns .flex {
+    display: flex;
+    justify-content: center;
+}
+
+.sns-icon {
+    padding: 25px 0;
+    color: #8c8c8c;
+    overflow: hidden;
+    font-size: 40px;
+    width: 185px;
+    transition: all 0.5s ease-in-out;
+    display: inline-block; /* 要素をインラインブロックとして表示 */
+    margin: 10px 0; /* 縦方向の間隔を設定 */
+}
+
+.sns-icon:hover {
+    background: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    /* 767px以下に適用されるcss（スマホ用） */
+    .sns {
+        padding: 50px 15px;
+    }
+    .sns .inner {
+        width: 100%;
+    }
+    .sns .flex {
+        flex-flow: column;
+    }
+    .sns-icon {
+        padding: 50px 0;
+    }
+}
+/* セクション5 */
+
+
+/* フッター */
+.footer {
+    background: #cfd8dc;
+    text-align: right;
+}
+
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+/* フッター */
